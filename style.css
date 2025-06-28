@@ -130,6 +130,7 @@ body{
   }
   .carousel-caption p {
     display: none;
+
   }
   .carousel-caption h1 {
     font-size: 1rem;
@@ -200,8 +201,16 @@ body{
   display: block;
   border-radius: 8px;
   }
+
+}
+@media (max-width:768px) {
   .meet{
     font-size: 40px !important;
+    color: #e79800 !important; 
+    padding-top: 10px;
+  }
+  .meep{
+    font-size: 11.3px;
   }
 }
 .meet{
