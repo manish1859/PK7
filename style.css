@@ -203,20 +203,23 @@ body{
   }
 
 }
-.meet{
-  color: #e79800 !important; 
+.meet {
+  color: #e79800 !important;
   font-size: 7vh;
 }
-@media (max-width:768px) {
-  .meet{
-    font-size: 5.5vh !important;
-    color: #e79800 !important; 
-    padding-top: 10px;
+
+@media (max-width: 768px) {
+  .meet {
+    font-size: 4vh !important;
+    color: #e79800 !important;
+    padding-top: 10px !important;
   }
-  .meep{
-    font-size: 11.3px;
+
+  .meep {
+    font-size: 11.3px !important;
   }
 }
+
 
 .about-text h4 {
   color: #e79800;
