@@ -419,7 +419,15 @@ body{
   margin-right: 10px;
   font-size: 20px;
 }
-
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #25d366;
+  padding: 12px 15px;
+  font-size: 24px;
+  z-index: 999;
+}
 
 .footer {
   background-color: #a37210;
@@ -438,57 +446,51 @@ body{
   }
 }
 .whatsapp-button {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: all 0.3s ease;
-  animation: popUp 1.2s ease;
-  &:hover{
-  transform: scale(1.12);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-  }
-}
-
-.whatsapp-button img {
-  width: 28px;
-  
-  height: 28px;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 @media (max-width: 768px) {
   .whatsapp-button {
-    width: 55px;
-    height: 55px;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .whatsapp-button img {
-    width: 24px;
-    height: 24px;
-  }
+          position: fixed;
+          bottom: 40px;
+          right: 10px;
+          width: 60px;
+          height: 60px;
+          border-radius: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          z-index: 1000;
+      }
 }
 
-@keyframes popUp {
-  0% {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
+.custom-footer {
+  background-color: #e79800;
+  color: #d1d1d1;
+  padding: 40px 0;
+}
+.custom-footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+.custom-footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
 .social-icons a {
   color: black;
   font-size: 18px;
@@ -559,6 +561,18 @@ body{
     transition: 0.3s;
   }
 
+  .fb {
+    background-color: #3b5998;
+  }
+
+  .ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, 
+      #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+
+  .yt {
+    background-color: #ff0000;
+  }
 
   .social-icon:hover {
     transform: scale(1.1);
