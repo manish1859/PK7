@@ -75,6 +75,16 @@ body{
 } 
 
 
+.slider{
+  margin-top: 50px;
+}
+
+@media (max-width:767px) {
+  .slider{
+    margin-top: 100px;
+  }
+}
+
 .carousel-caption {
   bottom: 30%;
 }
@@ -195,11 +205,8 @@ body{
   .h41{
     font-size: 27px;
   }
-  .frame img {
-  width: 100%;
-  height: 45vh !important;
-  display: block;
-  border-radius: 8px;
+  .frame  {
+  display: none;
   }
 
 }
@@ -277,18 +284,53 @@ body{
   object-fit: cover;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  object-fit: cover;
-
 }
 
+/* ⭐ STAR ICON */
 .star-icon {
-  color:#e79800; 
+  color: #e79800;
   font-size: 20px;
 }
 
-.highlight {
+/* 📌 CARD CONTAINER FIX */
+.swiper-slide {
+  display: flex;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  border: 0.5px solid #e79800;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ MAIN FIX: CARD BODY = FLEXIBLE CONTENT */
+.card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 📌 Title & Paragraph */
+.card-title {
+  font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: #1f2937;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #4b5563;
+  flex-grow: 1; /* Pushes button down */
 }
 
 .lesson-text {
@@ -296,12 +338,13 @@ body{
   color: #555;
 }
 
-
-.card-body {
-  padding: 20px;
-  
+/* ✅ Button Section - Always at Bottom */
+.mt-5,
+.mt-auto {
+  margin-top: auto !important;
 }
 
+/* ✨ Learn Button Styling */
 .yellow-btn {
   background-color: #e79800;
   color: #000;
@@ -315,31 +358,14 @@ body{
 
 .yellow-btn:hover {
   background-color: #eab308;
-  color:#eab308 ;
   color: #fff;
   transform: translateY(-2px);
 }
 
-.card {
-  border: none;
-  border-radius: 10px;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card-title {
-  font-size: 18px;
+/* Bold Labels */
+.highlight {
   font-weight: 600;
-  color: #1f2937; 
-}
-
-.card-text {
-  font-size: 14px;
-  color: #4b5563; 
+  color: #333;
 }
 
 /* facility */
