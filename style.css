@@ -286,13 +286,11 @@ body{
   border-top-right-radius: 9px;
 }
 
-/* ⭐ STAR ICON */
 .star-icon {
   color: #e79800;
   font-size: 20px;
 }
 
-/* 📌 CARD CONTAINER FIX */
 .swiper-slide {
   display: flex;
   height: 100%;
@@ -312,7 +310,6 @@ body{
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* ✅ MAIN FIX: CARD BODY = FLEXIBLE CONTENT */
 .card-body {
   padding: 20px;
   flex: 1;
@@ -320,7 +317,6 @@ body{
   flex-direction: column;
 }
 
-/* 📌 Title & Paragraph */
 .card-title {
   font-size: 18px;
   font-weight: 600;
@@ -330,7 +326,7 @@ body{
 .card-text {
   font-size: 14px;
   color: #4b5563;
-  flex-grow: 1; /* Pushes button down */
+  flex-grow: 1;
 }
 
 .lesson-text {
@@ -338,13 +334,11 @@ body{
   color: #555;
 }
 
-/* ✅ Button Section - Always at Bottom */
 .mt-5,
 .mt-auto {
   margin-top: auto !important;
 }
 
-/* ✨ Learn Button Styling */
 .yellow-btn {
   background-color: #e79800;
   color: #000;

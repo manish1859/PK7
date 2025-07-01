@@ -337,15 +337,43 @@
           </div>
         </div>
       </div>
-
+      
+      
+      
+      <div class="swiper-pagination"></div>
     </div>
   </div>
   </div>
+
+</div>
+<div class="container-fluid text-white py-4 " style="background-image: url('https://kodeforest.net/html/uoe/images/counter-bg.png'); background-size: cover; background-position: center; background-color: black;">
+  <div class="row text-center px-5">
+    <div class="col-md-3 border-end border-light">
+      <div class="fs-1 mb-2"><i class="fas fa-users"></i></div>
+      <div class="h3 fw-bold stat-number" data-target="10123">0</div>
+      <div class="text-uppercase small fw-semibold">Foreign Followers</div>
+    </div>
+    <div class="col-md-3 border-end border-light">
+      <div class="fs-1 mb-2"><i class="fas fa-book-open"></i></div>
+      <div class="h3 fw-bold stat-number" data-target="1098">0</div>
+      <div class="text-uppercase small fw-semibold">Classes Complete</div>
+    </div>
+    <div class="col-md-3 border-end border-light">
+      <div class="fs-1 mb-2"><i class="fas fa-trophy"></i></div>
+      <div class="h3 fw-bold stat-number" data-target="10212">0</div>
+      <div class="text-uppercase small fw-semibold">Students Enrolled</div>
+    </div>
+    <div class="col-md-3">
+      <div class="fs-1 mb-2"><i class="fas fa-user-graduate"></i></div>
+      <div class="h3 fw-bold stat-number" data-target="20">0</div>
+      <div class="text-uppercase small fw-semibold">Certified Teachers</div>
+    </div>
   </div>
+</div>
 </section>
 
 
- <section style="padding-bottom: 20px; padding-top: 50px;">
+<section style="padding-bottom: 20px; padding-top: 50px;">
   <div class="container">
     <h1 class="text-center mb-3" style="color:#e79800; font-size: 6vh;padding-bottom: 20px;" data-aos="zoom-in"><b>Faculty</b></h1>
 
@@ -648,24 +676,45 @@
     );
   }
 
-  function startCounter() {
+    document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll('.stat-number');
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = 0;
-      const step = target / 200;
+    let started = false;
 
-      const interval = setInterval(() => {
-        count += step;
-        if (count >= target) {
-          counter.innerText = target;
-          clearInterval(interval);
+    const animateCounter = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      const duration = 2000; // milliseconds
+      const startTime = performance.now();
+
+      const updateCount = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.floor(progress * target);
+        counter.innerText = value.toLocaleString();
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
         } else {
-          counter.innerText = Math.ceil(count);
+          counter.innerText = target.toLocaleString(); // Ensure exact final value
         }
-      }, 10);
+      };
+
+      requestAnimationFrame(updateCount);
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+          counters.forEach(counter => animateCounter(counter));
+          started = true;
+          obs.disconnect(); // Run only once
+        }
+      });
+    }, {
+      threshold: 0.4
     });
-  }
+
+    observer.observe(document.querySelector('.container-fluid'));
+  });
 
   window.addEventListener('scroll', function () {
     const section = document.getElementById('counter-section');
@@ -674,6 +723,7 @@
       counted = true;
     }
   });
+
 
  
     // Animation
