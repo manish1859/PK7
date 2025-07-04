@@ -40,7 +40,7 @@ body{
 }
 
 .nav-link.a:hover {
-  color: 	#1976D2;
+  color: #007b;
 }
 
 .nav-link.a:hover::after {
@@ -49,16 +49,16 @@ body{
 
 .btn2 {
   text-decoration: none;
-  background-color: 	#1A237E !important;
-  color: 		#757575 !important;
+  background-color: #e79800 !important;
+  color: white !important;
   padding: 8px 26px;
   border-radius: 30px;
   font-weight: bold;
-  border: 1px solid #1976D2 !important;
+  border: 1px solid #e79800 !important;
   &:hover {
     transform: scale(1.05);
-    color:#757575 !important;
-    background-color: 	#1976D2 !important;
+    color: #e79800 !important;
+    background-color: white !important;
     font-weight: bold;
   }
 }
