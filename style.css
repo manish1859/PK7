@@ -5,7 +5,7 @@ html {
   font-family: 'Roboto Slab',serif;
 }
 body{
-  background-color: #f8f9fa;
+  background-color: #FFFFFF;
 }
 
 .navbar {
@@ -20,7 +20,7 @@ body{
 }
 
 .nav-link.a {
-  color: #2b0051;
+  color: #212121;
   font-weight: 500;
   font-size: 19px;
   margin: 0 10px;
@@ -40,7 +40,7 @@ body{
 }
 
 .nav-link.a:hover {
-  color: #007bff;
+  color: 	#1976D2;
 }
 
 .nav-link.a:hover::after {
@@ -49,16 +49,16 @@ body{
 
 .btn2 {
   text-decoration: none;
-  background-color: #e79800 !important;
-  color: white !important;
+  background-color: 	#1A237E !important;
+  color: 		#757575 !important;
   padding: 8px 26px;
   border-radius: 30px;
   font-weight: bold;
-  border: 1px solid #e79800 !important;
+  border: 1px solid #1976D2 !important;
   &:hover {
     transform: scale(1.05);
-    color: #e79800 !important;
-    background-color: white !important;
+    color:#757575 !important;
+    background-color: 	#1976D2 !important;
     font-weight: bold;
   }
 }
@@ -165,7 +165,7 @@ body{
 }
 
 .pagh1 {
-  color: rgb(199, 198, 198);
+  color: black;
   font-size: 2.5vh;
 }
 
