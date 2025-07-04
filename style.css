@@ -75,6 +75,27 @@ body{
 } 
 
 
+/* Remove padding and margin from section */
+#home.slider {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make sure slider and its child elements are full width */
+#carouselExampleDark,
+.carousel-inner,
+.carousel-item,
+.carousel-image-wrapper,
+.carousel-item img {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+
+
 .slider{
   margin-top: 50px;
 }
@@ -189,6 +210,9 @@ body{
   padding-bottom: 7px;
   font-size: 30px;
 }
+.frame{
+  width: 100%;
+}
 @media (min-width:768px) {
   .h12{
     display: none;
@@ -246,7 +270,7 @@ body{
 
 .frame img {
   width: 100%;
-  height: 82vh;
+  /* height: 82vh; */
   display: block;
   border-radius: 8px;
 }
@@ -258,7 +282,7 @@ body{
   left: 20px;
   right: 20px;
   bottom: 20px;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   pointer-events: none;
   z-index: 1;
 }
