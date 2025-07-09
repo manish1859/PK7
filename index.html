@@ -455,6 +455,16 @@
     <div style="text-align: center; color: #e79800; padding-top: 35px;" data-aos="zoom-in">
       <h1><b>Our Gallery</b></h1>
     </div>
+    <ul class="nav nav-tabs mb-4" id="mediaTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="image-tab" data-bs-toggle="tab" href="#image" role="tab" aria-controls="image" aria-selected="true">Image</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="video-tab" data-bs-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false">Video</a>
+    </li>
+  </ul>
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="image" role="tabpanel" aria-labelledby="image-tab">
 <div class="swiper mySwiper">
             <div class="swiper-wrapper pb-5 p-3">
               <!-- Slide 1 -->
@@ -492,18 +502,14 @@
               <div class="swiper-slide">
                 <img src="Image/student12.jpg" class="img-fluid" alt="Gallery Image 11">
               </div>
-              <!-- <div class="swiper-slide">
-                <img src="Image/student15.jpg" class="img-fluid" alt="Gallery Image 11">
-              </div> -->
+            
               <div class="swiper-slide">
                 <img src="Image/student16.jpg" class="img-fluid" alt="Gallery Image 11">
               </div>
               <div class="swiper-slide">
                 <img src="Image/student17.jpg" class="img-fluid" alt="Gallery Image 11">
               </div>
-              <!-- <div class="swiper-slide">
-                <img src="Image/student18.jpg" class="img-fluid" alt="Gallery Image 11">
-              </div> -->
+              
               <div class="swiper-slide">
                 <img src="Image/student19.jpg" class="img-fluid" alt="Gallery Image 11">
               </div>
@@ -513,7 +519,71 @@
               <div class="swiper-slide">
                 <img src="Image/student21.jpg" class="img-fluid" alt="Gallery Image 11">
               </div>
+              </div>
             </div>
+            </div>
+           <!-- VIDEO TAB PANEL -->
+<!-- VIDEO TAB PANEL -->
+<div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+  <div class="swiper myVideoSwiper">
+    <div class="swiper-wrapper pb-5 m-3">
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/poFkZS-sfjc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/Rp1K9QVSXbA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/820nzDIHp7Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/diqOCRacKNk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/OHbcLnrbqO4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/J1Xoem9aP7I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/w6t3XTN8hsg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/CCrnJ2S9ZVU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/4Hs98GT3xzU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/tLkVVZigqiE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/d4C3l0QMsLM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe class="img-fluid rounded" width="100%" height="300" src="https://www.youtube.com/embed/EFnk-SLXSvg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+    </div>
+    
+    <!-- Optional: Pagination for video swiper -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+
 
             <!-- Pagination & Navigation -->
             <div class="swiper-pagination"></div>
@@ -678,6 +748,33 @@
         }
       }
     });
+    var videoSwiper = new Swiper(".myVideoSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500, 
+      disableOnInteraction: false, 
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
+      }
+    }
+  });
   </script>
 
 
